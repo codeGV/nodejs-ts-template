@@ -1,0 +1,43 @@
+{
+    "db": {
+        "url": "mongodb://127.0.0.1:27017/redskyWebsiteApis",
+        "database": "redskyWebsiteApis"
+
+    },
+    "app": {
+        "url": "localhost",
+        "port": 6200
+    },
+    "webServer": {
+        "url": "localhost",
+        "port": 6200
+    },
+    "auth": {
+        "jwtKey": "supersecret"
+    },
+    "providers": {
+        "file-store": {
+            "dir": "public/files",
+            "root": "http://54.179.179.175:6200/files"
+        }
+    },
+    "logger": {
+        "logStart": false,
+        "file": {
+            "filename": "logs/logs.json",
+            "level": "silly",
+            "handleExceptions": true,
+            "json": true,
+            "maxsize": 512000,
+            "maxFiles": 5,
+            "colorize": false
+        },
+        "console": {
+            "level": "debug",
+            "handleExceptions": true,
+            "json": false,
+            "colorize": true
+        },
+        "http": {}
+    }
+}
